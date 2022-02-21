@@ -18,6 +18,6 @@ class ArrayUtils
 
     public static function findBy(array $data, callable $function): mixed
     {
-        return current(array_filter($data, $function));
+        return array_filter($data, $function)[0] ?? null;
     }
 }
